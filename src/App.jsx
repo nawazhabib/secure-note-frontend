@@ -206,6 +206,7 @@ export default function App() {
           <button disabled={busy}>{busy ? 'Please wait…' : mode === 'login' ? 'Sign in' : 'Create account'}</button>
         </form>
         <p className="switch">{mode === 'login' ? "Don't have an account?" : 'Already registered?'} <button className="text-button" onClick={() => { clearAlerts(); setMode(mode === 'login' ? 'register' : 'login'); }}> {mode === 'login' ? 'Create account' : 'Sign in'}</button></p>
+        {mode === 'login' && <p className="hint">Demo admin login:<br/><strong>admin@gmail.com</strong><br/>Password: <strong>admin1234</strong></p>}
       </section>
     </main>;
   }
